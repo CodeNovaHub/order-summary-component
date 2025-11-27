@@ -1,0 +1,161 @@
+@charset 'UTF'8'';
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+/* 
+## Colors
+
+### Primary
+ */
+ 
+--blue100: hsl(225, 100%, 94%);
+--blue700: hsl(245, 75%, 52%);
+--lightblue: hsl(245, 75%, 52%, 60%);
+--white: #ffffff;
+--shadow: #00000021;
+
+/* ### Neutral */
+
+--blue50: hsl(225, 100%, 98%);
+--gray600: hsl(224, 23%, 55%);
+--blue950: hsl(223, 47%, 23%);
+
+/*
+## Typography
+
+### Body Copy
+ */
+--font-size: 16px; /* (paragraph) */
+
+/* ### Font */
+
+--family: 'Red Hat Display';
+ /*
+[Red Hat Display]
+(https://fonts.google.com/specimen/Red+Hat+Display)
+- Weights: 500, 700, 900 
+ */
+ --regular: 500;
+ --semi-bold: 700;
+ --bold: 900; 
+}
+body {
+    background:var(--blue100) url("../images/pattern-background-mobile.svg") no-repeat top center; 
+    background-size: contain;
+    display: grid;
+    place-items:center;
+    min-height: 100vh;
+    width: 100vw;
+}
+main {
+    background: var(--white);
+    width: 22rem;
+    border-radius: 1.3rem;
+    overflow: hidden;
+    box-shadow: 0 1.7rem 3rem var(--shadow);
+    font-family: var(--family);
+    color: var(--gray600);
+    margin: 1.3rem 0rem;
+}
+section.img img {
+    width: 100%;
+}
+section.content {
+    padding: 1.5rem;
+    text-align: center;
+}
+section.content h1 {
+    font-size: 1.5rem;
+    font-weight: var(--bold);
+    color: var(--blue950);
+    margin-bottom: 1.4rem;
+}
+section.content p {
+    font-size: var(--font-size);
+    line-height: 1.6rem;
+    padding: 0rem 1rem;
+    font-weight: var(--semi-bold);
+}
+section.content .box-music {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: var(--blue50);
+    margin: 1.5rem 0rem;
+    border-radius: .7rem;
+}
+.box-music .values{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:1.5rem;
+}
+.box-music .price {
+    display: flex;
+    flex-flow: column;
+}
+.box-music strong {
+    font-weight: var(--bold);
+    color: var(--blue950);
+}
+.box-music .value {
+    font-weight: var(--semi-bold);
+}
+.box-music .change a {
+    font-size: .9rem;
+    font-weight: var(--bold);
+    color: var(--blue700);
+}
+input[type="button"] {
+    display: block;
+    width: 100%;
+    border-radius: .6rem;
+    font-weight: var(--bold);
+    border: none;
+    background: transparent;
+    color: var(--gray600);
+    font-size: 1rem;
+}
+input.buy {
+    margin-bottom: 1rem;
+    color: var(--white);
+    background: var(--blue700);
+    box-shadow: 0 1rem 1.5rem var(--shadow);
+    padding: 1.2rem;
+}
+input.cancel {
+    padding: .7rem 0rem;
+}
+a.change:hover {
+    text-decoration: none;
+    color: var(--ligthblue);
+    cursor: pointer;
+}
+input.buy:hover {
+    background: var(--lightblue);
+    cursor: pointer;
+}
+input.cancel:hover {
+    color: var(--blue950);
+    cursor: pointer;
+}
+@media screen and (min-width:768px){
+    body {
+        background:var(--blue100) url("../images/pattern-background-desktop.svg") no-repeat top center;
+    }
+    main {
+        width: 31rem;
+    }
+    section.content {
+        padding: 3rem;
+    }
+    section.content h1 {
+        font-size: 2rem;
+    }
+}
